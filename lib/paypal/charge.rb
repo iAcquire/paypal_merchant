@@ -2,7 +2,7 @@ module PayPal
   class Charge
     include PayPal::Merchant::DoDirectPayment
 
-    attr_accessor :response
+    attr_accessor :response, :amount, :card
 
 
     class << self
@@ -13,9 +13,9 @@ module PayPal
 
 
     def initialize(params = {})
-      amount, card = params[:amount], params[:card]
-      if amount && card
-        @response = charge(amount, card, params)
+      @amount, @card = params[:amount], params[:card]
+      if @amount && @card
+        @response = charge(@amount, @card, params)
       else
         raise "You must provide an amount and credit card"
       end
