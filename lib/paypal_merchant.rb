@@ -19,25 +19,25 @@ module PayPal
     attr_accessor :mode, :logger, :client_id, :client_secret, :username, :password, :signature
 
     def configure
-      yield self      
+      yield self
       configure_sdk
       self
-    end    
-
-  private
-
-    def configure_sdk
-      PayPal::SDK::Core::Config.logger = @logger
-      PayPal::SDK.configure(
-        mode: @mode,
-        client_id: @client_id,
-        client_secret: @client_secret,
-        username: @username,
-        password: @password,
-        signature: @signature
-      )
     end
 
+  end
+
+private
+
+  def PayPal.configure_sdk
+    PayPal::SDK::Core::Config.logger = @logger
+    PayPal::SDK.configure(
+      mode: @mode,
+      client_id: @client_id,
+      client_secret: @client_secret,
+      username: @username,
+      password: @password,
+      signature: @signature
+    )
   end
 
 end

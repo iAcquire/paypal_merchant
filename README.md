@@ -37,4 +37,3 @@ Or alternatively:
 ##### Transfer $20 to another PayPal account
     transfer = PayPal::Transfer.create(amount: 2000, email: "paypal-email@example.com")
     transfer.success? # => true
-
