@@ -10,10 +10,6 @@ A wrapper for PayPal's merchant-sdk-ruby library
 
 ### Configuration
   
-    require 'paypal_merchant'
-
-Then:
-
     PayPal.mode = "live" # default is "sandbox"
     PayPal.username = PAYPAL_USERNAME
     PayPal.password = PAYPAL_PASSWORD
@@ -21,12 +17,12 @@ Then:
 
 Or alternatively:
 
-    PayPal.configure({
-      mode: "live", 
-      username: PAYPAL_USERNAME, 
-      password: PAYPAL_PASSWORD,
-      signature: PAYPAL_SIGNATURE
-    })
+    PayPal.configure do |config|
+      config.mode = "live" 
+      config.username = PAYPAL_USERNAME
+      config.password = PAYPAL_PASSWORD
+      config.signature = PAYPAL_SIGNATURE
+    end
 
 
 ### Examples
