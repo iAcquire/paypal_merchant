@@ -1,2 +1,4 @@
 /paypal_merchant-*.gem
 /Gemfile.lock
+test
+*.iml

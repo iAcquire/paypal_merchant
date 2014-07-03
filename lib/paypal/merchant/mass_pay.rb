@@ -11,7 +11,9 @@ module PayPal
           mass_pay_item = {
             ReceiverEmail: email,
             Amount: {currencyID: options[:currency],
-              value: Money.new(amount).dollars}
+              value: Money.new(amount).dollars},
+            Note: options[:note],
+            UniqueId: options[:unique_id]
           }
           send_mass_pay(mass_pay_item, options)
         rescue
@@ -30,7 +32,8 @@ module PayPal
               Amount: {
                 currencyID: options[:currency] || "USD",
                 value: Money.new(recipient[:amount]).dollars
-              }, Note: options[:note]}
+              }, Note: options[:note],
+              UniqueId: options[:unique_id]}
           end
           send_mass_pay(mass_pay_item, options)
         rescue

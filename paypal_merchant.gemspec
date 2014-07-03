@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name        = 'paypal_merchant'
-  gem.version     = '0.1.4'
+  gem.version     = '0.1.5'
   gem.summary     = "Wrapper for PayPal's merchant-sdk-ruby library"
   gem.description = "Wrapper for PayPal's merchant-sdk-ruby library"
   gem.homepage    = "https://github.com/zohlgren/paypal_merchant"
