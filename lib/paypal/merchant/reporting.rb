@@ -19,7 +19,7 @@ module PayPal
           balance_request = merchant_api.build_get_balance
           response = merchant_api.get_balance(balance_request)
           if response.success?
-            Money.parse(response.balance.value).cents
+            Monetize.parse(response.balance.value).cents
           else
             nil
           end
