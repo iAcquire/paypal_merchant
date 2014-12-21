@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('paypal-sdk-merchant', '~> 1.103')
   gem.add_dependency('money', '~> 6.5.0')
-  gem.add_dependency('monetize', '~> 1.0.0')
+  gem.add_dependency('monetize', '~> 1.1.0')
 
   gem.files = `git ls-files`.split("\n")
   gem.require_path = "lib"
