@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.license     = 'MIT'
 
   gem.add_dependency('paypal-sdk-merchant', '~> 1.103')
-  gem.add_dependency('money', '~> 6.17.0')
+  gem.add_dependency('money', '~> 6.16.0')
   gem.add_dependency('monetize', '~> 1.11.0')
 
   gem.files = `git ls-files`.split("\n")
